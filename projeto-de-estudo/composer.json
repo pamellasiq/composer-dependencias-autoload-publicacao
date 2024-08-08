@@ -1,0 +1,13 @@
+{
+    "name": "pamellasiq/buscador-cursos",
+    "description": "Projeto que busca cursos no site da Alura",
+    "type": "library",
+    "license": "Apache | MIT",
+    "authors": [
+        {
+            "name": "Pamella Siqueira",
+            "email": "contatopamellasiqueira@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,6 +1,16 @@
 # CURSO: PHP Composer: Dependências, Autoload e Publicação
 
-## Instalação do Composer
+# Índice
+1. [Instalando o Composer](#instalando-o-composer)
+    1. [Como Instalar o Composer e Criar o Arquivo composer.json](#como-instalar-o-composer-e-criar-o-arquivo-composerjson)
+    2. [Nomes de Pacotes composer](#nomes-de-pacotes-composer)
+    3. [Como criar seu pacote composer](#como-criar-seu-pacote-composer)
+    4. [Resultado](#resultado)
+2. [Gerenciando Dependências](#gerenciando-dependências)
+    1. [Instalando Guzzle e DomCrawler](#instalando-guzzle-e-domcrawler)
+
+
+# Instalando o Composer
 
 Composer é uma ferramenta essencial para gerenciar dependências em projetos PHP.
 
@@ -62,13 +72,13 @@ Você também pode usar o comando `composer init` para que o Composer te guie no
 
 Depois de criar o arquivo `composer.json`, você pode começar a adicionar as dependências que seu projeto precisa.
 
-### Nomes de Pacotes composer
+## Nomes de Pacotes composer
 
 ```
 Package name (<nome_de_quem_distribui>/<nome do pacote>)
 ```
 
-### Como criar seu pacote composer
+## Como criar seu pacote composer
 ```
 Package name (<vendor>/<name>) [pâmella/composer-dependencias-autoload-publicacao]: pamellasiq/projeto_novo
 Description []: descricao do projeto aqui
@@ -100,3 +110,40 @@ Se tudo der certo, irá gerar um arquivo assim:
     "require": {}
 }
 ```
+
+# Gerenciando Dependências
+
+O Composer é como um supermercado de pacotes de código, e o site [Packagist](https://packagist.org/) é o seu catálogo!
+
+Para encontrar os pacotes que precisamos, podemos usar a busca do site. Por exemplo, para fazer requisições HTTP, podemos procurar por "http client" e para analisar o HTML, podemos procurar por "dom crawler".
+
+O site nos mostra os pacotes disponíveis, com uma breve descrição e links para a documentação.
+
+## Instalando Guzzle e DomCrawler
+No terminal, navegue até o diretório do seu projeto e execute os seguintes comandos:
+
+``` sh
+composer require guzzlehttp/guzzle
+composer require symfony/dom-crawler
+```
+
+Ou, adicione ao arquivo `composer.json` require as seguintes linhas:
+
+``` sh
+    "require": {
+            "guzzlehttp/guzzle": "^7.9",
+            "symfony/dom-crawler" : "^7.1"
+    }
+```
+Depois no terminal:
+
+``` sh
+    composer install
+```
+
+E para atualizar os arquivos:
+
+``` sh
+    composer update
+```
+

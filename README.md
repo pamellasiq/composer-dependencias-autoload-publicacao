@@ -11,6 +11,7 @@
 3. [Entendendo autoload](#entendendo-autoload)
     3. 1 [Configurando a PSR-4](#configurando-a-psr-4)
     3. 2[Classmap](#classmap)
+4. [Ferramentas de Qualidade de Código](#ferramentas-de-qualidade-de-código)
 
 
 # Instalando o Composer
@@ -206,3 +207,10 @@ Com essas ferramentas, você pode usar o Composer para carregar classes e funç�
             "./Teste.php"
     },
 ```
+# Ferramentas de Qualidade de Código
+
+o parâmetro `--dev` no comando `composer require` indica que a dependência instalada é específica para o ambiente de desenvolvimento e não será utilizada em produção.
+
+Também aprendemos que podemos instalar as dependências de produção com o comando `composer install --no-dev`, que ignora as dependências de desenvolvimento.
+
+Por fim, vimos como verificar se o PHPUnit foi instalado corretamente, executando o comando `vendor\bin\phpunit --version`.

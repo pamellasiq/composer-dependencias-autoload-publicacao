@@ -2,15 +2,15 @@
 
 # Índice
 1. [Instalando o Composer](#instalando-o-composer)
-    1. 1 [Como Instalar o Composer e Criar o Arquivo composer.json](#como-instalar-o-composer-e-criar-o-arquivo-composerjson)
-    2. 1 [Nomes de Pacotes composer](#nomes-de-pacotes-composer)
-    3. 1 [Como criar seu pacote composer](#como-criar-seu-pacote-composer)
-    4. 1 [Resultado](#resultado)
+    1. [Como Instalar o Composer e Criar o Arquivo composer.json](#como-instalar-o-composer-e-criar-o-arquivo-composerjson)
+    2. [Nomes de Pacotes composer](#nomes-de-pacotes-composer)
+    3. [Como criar seu pacote composer](#como-criar-seu-pacote-composer)
+    4. [Resultado](#resultado)
 2. [Gerenciando Dependências](#gerenciando-dependências)
-    2. 1 [Instalando Guzzle e DomCrawler](#instalando-guzzle-e-domcrawler)
+    1. [Instalando Guzzle e DomCrawler](#instalando-guzzle-e-domcrawler)
 3. [Entendendo autoload](#entendendo-autoload)
-    3. 1 [Configurando a PSR-4](#configurando-a-psr-4)
-    3. 2[Classmap](#classmap)
+    1. [Configurando a PSR-4](#configurando-a-psr-4)
+    2. [Classmap](#classmap)
 4. [Ferramentas de Qualidade de Código](#ferramentas-de-qualidade-de-código)
 
 

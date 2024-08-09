@@ -167,3 +167,27 @@ Por exemplo, se o namespace da sua classe é `Alura\BuscadorDeCursos`, ela deve 
 O Composer usa esse padrão para encontrar as classes que você precisa, sem precisar fazer require de cada arquivo manualmente. Isso torna o seu código mais organizado e fácil de gerenciar.
 
 Para conhecer mais padrões, basta conferir no [PHP-FIG](https://www.php-fig.org/)
+
+## Configurando a PSR-4
+
+Para configurar o Composer para carregar as classes automaticamente usando a PSR-4.
+
+Primeiro, modificamos o arquivo `composer.json` adicionando a configuração `autoload` com a PSR-4, que mapeia um namespace para uma pasta específica do nosso projeto.
+
+``` sh
+    "autoload": {
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        }
+    }
+```
+
+Depois, executamos o comando `composer dumpautoload` para atualizar o arquivo vendor/autoload.php com as novas configurações.
+
+``` sh
+composer dumpautoload
+```
+
+Com isso, o Composer consegue encontrar e carregar as classes automaticamente, sem precisarmos usar require para cada arquivo.
+
+Essa configuração é essencial para organizar nosso código e facilitar a utilização de bibliotecas externas e classes próprias.

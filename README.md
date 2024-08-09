@@ -8,6 +8,7 @@
     4. [Resultado](#resultado)
 2. [Gerenciando Dependências](#gerenciando-dependências)
     1. [Instalando Guzzle e DomCrawler](#instalando-guzzle-e-domcrawler)
+3. [Entendendo autoload](#entendendo-autoload)
 
 
 # Instalando o Composer
@@ -154,3 +155,15 @@ Isso se dá pelo seguinte fato: O comando `composer install` lê o arquivo `comp
 Já o comando `composer update` lê o arquivo `composer.json`, instala as dependências mais atuais dentro das restrições definidas e atualiza o `composer.lock`.
 
 Sendo assim, em um projeto em andamento (tendo o arquivo composer.lock), para instalar uma nova dependência, é preciso executar o `composer require` ou após adicionar a dependência no arquivo `composer.json` executar o comando `composer update`.
+
+# Entendendo autoload
+
+o PSR-4 é um padrão para autoload que define como o Composer deve encontrar suas classes.
+
+Ele usa um mapeamento entre namespaces e pastas, garantindo que cada classe tenha um caminho único dentro do projeto.
+
+Por exemplo, se o namespace da sua classe é `Alura\BuscadorDeCursos`, ela deve estar dentro da pasta src. Se você tiver um namespace mais específico, como `Alura\BuscadorDeCursos\Helper`, a classe estará dentro da pasta `src/helper`.
+
+O Composer usa esse padrão para encontrar as classes que você precisa, sem precisar fazer require de cada arquivo manualmente. Isso torna o seu código mais organizado e fácil de gerenciar.
+
+Para conhecer mais padrões, basta conferir no [PHP-FIG](https://www.php-fig.org/)

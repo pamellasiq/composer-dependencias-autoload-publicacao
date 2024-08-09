@@ -1,5 +1,10 @@
 <?php
-use \GuzzleHttp\Client;
+require 'vendor/autoload.php';
+require 'src/Buscador.php';
+
+use Alura\BuscadorDeCursos\Buscador;
+use GuzzleHttp\Client;
+use Symfony\Component\DomCrawler\Crawler;
 
 $client = new Client();
 $resposta = $client->request(method:'GET', uri:'https://cursos.alura.com.br/courses');

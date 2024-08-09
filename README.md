@@ -147,3 +147,10 @@ E para atualizar os arquivos:
     composer update
 ```
 
+O pacote só foi buscado pelo composer ao executar `composer update`.
+
+Isso se dá pelo seguinte fato: O comando `composer install` lê o arquivo `composer.lock` e instala as exatas dependências lá definidas. No nosso caso, nós já tinhamos o arquivo criado, então o `composer.lock` foi lido e se não houver alterações, nada será instalado.
+
+Já o comando `composer update` lê o arquivo `composer.json`, instala as dependências mais atuais dentro das restrições definidas e atualiza o `composer.lock`.
+
+Sendo assim, em um projeto em andamento (tendo o arquivo composer.lock), para instalar uma nova dependência, é preciso executar o `composer require` ou após adicionar a dependência no arquivo `composer.json` executar o comando `composer update`.

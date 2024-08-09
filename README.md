@@ -2,13 +2,15 @@
 
 # Índice
 1. [Instalando o Composer](#instalando-o-composer)
-    1. [Como Instalar o Composer e Criar o Arquivo composer.json](#como-instalar-o-composer-e-criar-o-arquivo-composerjson)
-    2. [Nomes de Pacotes composer](#nomes-de-pacotes-composer)
-    3. [Como criar seu pacote composer](#como-criar-seu-pacote-composer)
-    4. [Resultado](#resultado)
+    1. 1 [Como Instalar o Composer e Criar o Arquivo composer.json](#como-instalar-o-composer-e-criar-o-arquivo-composerjson)
+    2. 1 [Nomes de Pacotes composer](#nomes-de-pacotes-composer)
+    3. 1 [Como criar seu pacote composer](#como-criar-seu-pacote-composer)
+    4. 1 [Resultado](#resultado)
 2. [Gerenciando Dependências](#gerenciando-dependências)
-    1. [Instalando Guzzle e DomCrawler](#instalando-guzzle-e-domcrawler)
+    2. 1 [Instalando Guzzle e DomCrawler](#instalando-guzzle-e-domcrawler)
 3. [Entendendo autoload](#entendendo-autoload)
+    3. 1 [Configurando a PSR-4](#configurando-a-psr-4)
+    3. 2[Classmap](#classmap)
 
 
 # Instalando o Composer
@@ -191,3 +193,16 @@ composer dumpautoload
 Com isso, o Composer consegue encontrar e carregar as classes automaticamente, sem precisarmos usar require para cada arquivo.
 
 Essa configuração é essencial para organizar nosso código e facilitar a utilização de bibliotecas externas e classes próprias.
+
+## Classmap
+
+o Composer te ajuda a organizar seu código, mesmo quando ele não segue as PSRs. Você aprendeu sobre o classmap, que permite mapear classes para arquivos específicos, e o files, que inclui arquivos específicos no autoload.
+
+Com essas ferramentas, você pode usar o Composer para carregar classes e funções de diferentes maneiras, sem precisar fazer require de cada arquivo individualmente. Isso facilita a organização do seu projeto e garante que todas as dependências sejam carregadas corretamente.
+
+``` sh
+    "autoload": {
+        "classmap":
+            "./Teste.php"
+    },
+```
